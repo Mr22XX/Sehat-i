@@ -96,7 +96,42 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;    
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
 }
+
+.box-calculate{
+    border-radius: 16px;
+    height: 70vh;
+    width: 80%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+}
+
+.container-calculate{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 180px;
+}
+
+
+.container2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #281549;
+    color: white;
+}
+
 
 .content{
     display: flex;
@@ -104,10 +139,16 @@ a{
     align-items: center;
     flex-direction: column;
     gap: 30px;
+    margin-bottom: 180px;
 }
 
 .text{
     padding-bottom: 50px;
+    font-size: 1.5rem;
+}
+
+.text-calculate{
+    margin-top: 50px;
     font-size: 1.5rem;
 }
 
@@ -132,11 +173,71 @@ a{
 .bg-img p{
     color: black;
     text-align: center;
+    font-size: 1.3rem;
 }
 
 .container-box{
     display: flex;
     gap: 80px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer{
+    height: 20vh;
+    position: absolute;
+    bottom: -105vh;
+    left: 20%;
+    width: 60%;
+    display: flex;
+    background-color: #7b4fce;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    box-shadow: #7b4fce 0px 10px 50px;
+    border-radius: 16px;
+    gap: 30px;
+}
+
+footer a{
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    font-weight: bolder;
+    
+}
+
+footer a:hover{
+    color: #fafd2e;
+}
+
+.row1-foot{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.row2-foot{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.social{
+    display: flex;
+    gap: 10px;
+}
+
+.fa-brands{
+    color: rgb(255, 255, 255);
+}
+
+.fa-brands:hover{
+    transform: translateY(-200%);
+    color: #fafd2e;
 }
 
 
@@ -144,12 +245,39 @@ a{
 
 
 
+@media screen and (max-width:1256px) {
+    .container1{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 150vh;
+        width: 100%;
+        background-color: #281549;
+        color: white;
+    }
+    
+    .content{
+        margin-bottom: 80px;
+    }
 
-@media screen and (max-width:1057px) {
-   .atr{
-    width: 350px;
-   }
+    footer{
+        height: 20vh;
+        position: absolute;
+        bottom: -155vh;
+        left: 20%;
+        width: 60%;
+        display: flex;
+        background-color: #7b4fce;
+        color: black;
+        justify-content: center;
+        align-items: center;
+        box-shadow: #7b4fce 0px 10px 50px;
+        border-radius: 16px;
+        gap: 30px;
+    }
 }
+
+
 
 @media screen and (max-width:870px) {
     .container{
@@ -161,9 +289,9 @@ a{
 
     .btn{
         position: absolute;
-        top: 30px;
+        top: 18px;
         right: 30px;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .container-box{
@@ -172,7 +300,49 @@ a{
         margin: 20px;
     }
 
+   
+
     .container1{
-        height: auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 200vh;
+        width: 100%;
+        background-color: #281549;
+        color: white;
+    }
+
+    footer{
+        height: 20vh;
+        position: absolute;
+        bottom: -205vh;
+        left: 20%;
+        width: 60%;
+        display: flex;
+        background-color: #7b4fce;
+        color: black;
+        justify-content: center;
+        align-items: center;
+        box-shadow: #7b4fce 0px 10px 50px;
+        border-radius: 16px;
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width:551px) {
+    footer{
+        height: 20vh;
+        position: absolute;
+        bottom: -205vh;
+        left: 0;
+        width: 100%;
+        display: flex;
+        background-color: #7b4fce;
+        color: black;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0;
+        box-shadow: #7b4fce 0px 10px 50px;
+        gap: 30px;
     }
 }
