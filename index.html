@@ -16,7 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header id="cont01">
         <div>
             <img src="./assets/logo.png" alt="logo" width="30px">
             <h2 class="roboto-medium">SEHAT(I)</h2>
@@ -25,15 +25,15 @@
 
 
     <main>
-        <section class="container">
+        <section class="container" id="cont0">
 
             <section class="content1  ">
                 <section>
                     <h1 class="judul teko-font ">SEHAT(I)</h1>
-                    <p class="desc roboto-medium"> Ukur Berat Ideal Berdasarkan BMI</p>
+                    <p class="desc roboto-medium"> Ukur Berat Ideal Dengan Rumus Borca</p>
                 </section>
-                <a href="">
-                    <div class="btn teko-font">
+                <a href="#" onclick="changeDisplay()">
+                    <div  class="btn teko-font">
                     Click Here
                     </div>
                 </a>
@@ -45,7 +45,7 @@
         </section>
 
 
-        <section class="container1">
+        <section class="container1" id="cont1">
 
          <section>
             <section class="content">
@@ -78,22 +78,44 @@
 
         </section>
 
-        <section class="container2">
+        <section class="container2" id="cont2">
             <section class="container-calculate">
                 <section class="text-calculate teko-font">
                     <h1>Hitung Berat Ideal</h1>
                 </section>
                     <section class="box-calculate">
-                    </section>                            
+                        <section style="display: flex;  flex-direction: column; gap: 20px; justify-content: center; align-items: center;" >
+                            <section style="display: flex; gap: 10px;">
+                                <label for="man" class="teko-font" style="color: rgb(255, 255, 255);">Laki-Laki</label>
+                                <input type="checkbox" id="man">
+                                <label for="woman" class="teko-font" style="color: rgb(255, 255, 255);">wanita</label>
+                                <input type="checkbox" id="woman">
+                            </section>
+                            <section style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                                <section style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; align-items: center;">
+                                    <section>
+                                        <h4 style="color: rgb(255, 255, 255); text-align: center; padding: 10px;" class="teko-font">Tinggi Badan</h4>
+                                        <input placeholder="Tinggi (cm)" type="number" style="height: 10vh;  width:30vh;font-size: 1.3rem; border-radius: 8px; border: none; outline: none;" id="tinggi" required>
+                                    </section>
+                                    <section>
+                                        <h4 style="color: rgb(255, 255, 255); text-align: center; padding: 10px;" class="teko-font">Berat Ideal</h4>
+                                        <input  type="text" style="height: 10vh;  width:30vh;font-size: 1rem; border-radius: 8px; border: none; outline: none; text-align: center;" id="hasil" readonly>
+                                    </section>
+                                </section>
+                                <button onclick="perhitungan()" style="display: flex; margin: 20px; border: none; width: 8vh; height: 4vh; align-items: center; justify-content: center; border-radius: 4px; cursor: pointer; outline: none;" class="teko-font">Cek</button>
+                            </section>
+                        </section>
+                    </section>   
+                    <button onclick="back()" style="display: flex; margin: 20px; border: none; width: 8vh; height: 4vh; align-items: center; justify-content: center; border-radius: 4px; cursor: pointer; outline: none;" class="teko-font">Kembali</button>                        
             </section>
         </section>
     </main>
 
     
-    <footer>
+    <footer id="foot">
         <section class="row1-foot teko-font">
-            <a href="#">Menu Utama</a>
-            <a href="#">Tips & Trick</a>
+            <a href="#cont01">Menu Utama</a>
+            <a href="#cont1">Tips & Trick</a>
             <a href="#">Ukur Berat Ideal</a>
         </section>
         <section class="row2-foot teko-font">
@@ -111,5 +133,7 @@
     <script>
       AOS.init();
     </script>
+
+    <script src="index.js"></script>
 </body>
 </html>
